@@ -58,9 +58,6 @@ class Helper {
 	
 	public static function validateForm($form, $data = null, $scenario = null) {
 		$form = self::createForm($form, $data, $scenario);
-		if(!$form->validate()) {
-			throw new UnprocessableEntityHttpException($form);
-		}
 		return $form->getAttributes();
 	}
 	
